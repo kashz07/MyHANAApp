@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="DataProtectionTool" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="ThirdParty" EntityType="DataProtectionTool.ThirdParty"/>
+                <EntitySet Name="System" EntityType="DataProtectionTool.System"/>
+                <EntitySet Name="Process" EntityType="DataProtectionTool.Process"/>
+                <EntitySet Name="BusinessUnit" EntityType="DataProtectionTool.BusinessUnit"/>
+                <EntitySet Name="BusinessProcess" EntityType="DataProtectionTool.BusinessProcess"/>
+                <EntitySet Name="MacroProcess" EntityType="DataProtectionTool.MacroProcess"/>
+            </EntityContainer>
+            <EntityType Name="ThirdParty">
+                <Key>
+                    <PropertyRef Name="thirdpartyname"/>
+                </Key>
+                <Property Name="thirdpartyname" Type="Edm.String" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="System">
+                <Key>
+                    <PropertyRef Name="systemname"/>
+                </Key>
+                <Property Name="systemname" Type="Edm.String" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="Process">
+                <Key>
+                    <PropertyRef Name="processname"/>
+                </Key>
+                <Property Name="processname" Type="Edm.String" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="BusinessUnit">
+                <Key>
+                    <PropertyRef Name="businessunitname"/>
+                </Key>
+                <Property Name="businessunitname" Type="Edm.String" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="BusinessProcess">
+                <Key>
+                    <PropertyRef Name="businessprocessname"/>
+                </Key>
+                <Property Name="businessprocessname" Type="Edm.String" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="MacroProcess">
+                <Key>
+                    <PropertyRef Name="macroprocessname"/>
+                </Key>
+                <Property Name="macroprocessname" Type="Edm.String" Nullable="false"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
